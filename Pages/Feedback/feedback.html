@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator App Feedback</title>
+    <link rel="stylesheet" href="./feedback.css" />
+    <link rel="icon" href="../../Assets/bmi.png" />
+  </head>
+  <body>
+    <header>
+      <div class="header-div">
+        <div class="Logo">
+          <a href="../Home/index.html">
+            <img src="../../Assets/BMI Logo.png" />
+          </a>
+        </div>
+        <div class="nav-links">
+          <nav>
+            <a href="../Home/index.html">Home</a>
+            <a href="../Calculate/calculator.html">Calculate</a>
+            <a href="../About/about.html">What is BMI?</a>
+            <a href="../Feedback/feedback.html"><span>Feedback</span></a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+        <button type="button" onclick="submitFeedback()">
+          Submit Feedback
+        </button>
+      </form>
+
+      <h2>Previous Feedback</h2>
+      <ul id="feedbackList"></ul>
+    </main>
+    <footer>
+      <div class="footerlogo Logo">
+        <a href="../Home/index.html"><img src="../../Assets/BMI Logo.png" /></a>
+      </div>
+      <div class="footer-content">&copy Copyright 2024 All rights Reserved</div>
+    </footer>
+
+    <script>
+      function submitFeedback() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const feedback = document.getElementById("feedback").value;
+
+        const feedbackList = document.getElementById("feedbackList");
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `<strong>${name}</strong> (${email}): ${feedback}`;
+        feedbackList.appendChild(listItem);
+
+        // Clear form fields
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("feedback").value = "";
+      }
+    </script>
+  </body>
+</html>

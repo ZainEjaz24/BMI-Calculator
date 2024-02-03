@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Body Mass Index is a simple calculation using a person's height and weight. This is a website that calculated the BMI of a person"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="./calculatorstyles.css" />
+    <link rel="icon" href="../../Assets/bmi.png" />
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-div">
+        <div class="Logo">
+          <a href="../Home/index.html"
+            ><img src="../../Assets/BMI Logo.png"
+          /></a>
+        </div>
+        <div class="nav-links">
+          <nav>
+            <a href="../Home/index.html">Home</a>
+            <a href="#"><span>Calculate</span></a>
+            <a href="../About/about.html">What is BMI?</a>
+            <a href="../Feedback/feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <div class="form-side">
+          <h1>Calculate Your <span>BMI </span>Now!</h1>
+          <form id="bmiForm">
+            <div class="form-in">
+              <div class="units-selection">
+                <h2>Choose <span>Units</span></h2>
+                <div>
+                  <label for="heightUnit"> Height Unit:</label>
+                  <select id="heightUnit" onchange="toggleHeightFields()">
+                    <option value="cm" selected>Centimeters (cm)</option>
+                    <option value="feetInches">Feet & Inches</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="weightUnit"> Weight Unit:</label>
+                  <select id="weightUnit" onchange="toggleWeightLabel()">
+                    <option value="kg" selected>Kilograms (kg)</option>
+                    <option value="lbs">Pounds (lbs)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="calculator-container">
+                <h2>Enter <span>Values</span></h2>
+                <div class="input-group" id="heightInput">
+                  <label for="height">Height (cm)</label>
+                  <input
+                    type="number"
+                    id="height"
+                    placeholder="Click to Enter"
+                    required
+                  />
+                </div>
+                <div class="input-group" id="weightInput">
+                  <label for="weight">Weight (kgs)</label>
+                  <input
+                    type="number"
+                    id="weight"
+                    placeholder="Click to Enter"
+                    required
+                  />
+                </div>
+                <br />
+                <div id="result"></div>
+              </div>
+            </div>
+            <button type="button" onclick="calculateBMI()">
+              Calculate BMI
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footerlogo Logo">
+        <a href="../Home/index.html"><img src="../../Assets/BMI Logo.png" /></a>
+      </div>
+      <div class="footer-content">&copy Copyright 2024 All rights Reserved</div>
+    </footer>
+    <script src="./calculator.js"></script>
+  </body>
+</html>

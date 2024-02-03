@@ -1,0 +1,302 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: 3rem;
+  background-image: url("../../Assets/BMI Calc.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header {
+  margin: auto;
+  min-height: 10vh;
+  background-color: white;
+  box-shadow: 2px 4px 4px rgba(140, 140, 140, 0.596);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.header-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+}
+.Logo {
+  flex: 1;
+}
+
+.Logo img {
+  width: 10rem;
+  height: 3.5rem;
+  margin: 0.5rem 0rem;
+}
+.Header-Logo img:hover {
+  cursor: pointer;
+}
+
+.nav-links {
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  transition: all 0.3s ease;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+nav a:hover {
+  color: red;
+}
+
+span {
+  color: red;
+}
+
+.main-container {
+  min-height: 100vh;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.Content {
+  width: 60%;
+  margin: auto;
+  line-height: 2rem;
+}
+footer {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 2px -4px 4px rgba(171, 171, 171, 0.5);
+}
+
+.footer-content {
+  flex: 2;
+  text-align: center;
+}
+
+button {
+  background-color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 2px grey;
+  border: 2px solid white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: white;
+  box-shadow: 2px 4px 4px grey;
+}
+button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.footerlogo {
+  margin-left: 4rem;
+}
+
+input {
+  background-color: white;
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin: 0.2rem 0rem;
+  box-shadow: 2px 4px 4px rgb(147, 147, 147);
+}
+
+label {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.units-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.form-in {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+  margin: auto;
+}
+
+h2 {
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+select {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  margin: 0.2rem;
+  box-shadow: 2px 4px 4px rgb(166, 166, 166);
+}
+
+.form-side {
+  background-color: rgba(256, 256, 256, 0.5);
+  margin-left: 2rem;
+  padding-bottom: 2rem;
+  width: 90%;
+  margin: auto;
+  border-radius: 10%;
+  box-shadow: 1px 3px 3px 3px rgba(137, 137, 137, 0.596);
+}
+
+#result {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 60%;
+  }
+  .empty {
+    display: none;
+  }
+  button {
+    padding: 0.5rem;
+  }
+  button a {
+    font-size: 0.8rem;
+  }
+
+  .footerlogo img {
+    width: 5rem;
+    height: 2.5rem;
+  }
+  .footer {
+    margin-left: 0;
+  }
+
+  .header-div {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .footer-content {
+    flex: 2;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 55%;
+  }
+
+  .empty {
+    display: none;
+  }
+
+  button {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  button a {
+    font-size: 0.8rem;
+  }
+
+  .footerlogo img {
+    width: 5rem;
+    height: 2.5rem;
+  }
+
+  .footer {
+    margin-left: 0;
+  }
+  .footerlogo {
+    margin-left: 1rem;
+  }
+
+  .header-div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .Logo img {
+    width: 5.5rem;
+    height: 2rem;
+    margin: 0.5rem 0;
+    margin-left: 6rem;
+  }
+
+  .footerlogo img {
+    margin-left: 0rem;
+  }
+
+  .form-side {
+    width: 15rem;
+    border-radius: 0%;
+    margin: 3rem 0rem 1rem 0rem;
+    margin-left: 2.4rem;
+    background-color: rgba(255, 255, 255, 0.696);
+    padding-bottom: 1rem;
+  }
+  input {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.6rem;
+  }
+  select {
+    padding: 0.2rem 0.5rem;
+    width: 9rem;
+    font-size: 0.6rem;
+  }
+  .form-in {
+    width: 8rem;
+    margin-left: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  label {
+    font-size: 0.8rem;
+  }
+  #result {
+    margin-left: 3rem;
+  }
+  option {
+    font-size: 0.8rem;
+  }
+}
